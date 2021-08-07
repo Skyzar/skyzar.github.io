@@ -1,22 +1,77 @@
 * {
+    font-family: sans-serif;
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
 body {
     margin: 0;
-    background-color: #05080a;
+    background-color: #060606;
 }
 
 canvas {
     display: block;
-    vertical-align: bottom;
 }
 
 #particles-js {
+    position: absolute;
     width: 100%;
     height: 100%;
+}
+
+.glasscard {
+    width: 300px;
+    height: 600px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid rgba(20, 20, 20, 0.5);
+    box-shadow: 3px 3px 10px 0 rgba( 0, 0, 0, 0.5);
+}
+
+.glasscard__header {
+    height: 210px;
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
+    background-color: rgba(10, 10, 10, .7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.glasscard__img {
+    padding: 15px;
+    border: 1px solid rgba(209, 213, 219, .3);
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+
+.glasscard__title {
+    padding-top: 20px;
+    color: #CCC;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.glasscard__text {
+    color: #CCC;
+    padding: 20px;
+}
+
+.glasscard__card {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba( 180, 180, 180, 0.1);
 }
