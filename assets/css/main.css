@@ -23,6 +23,28 @@ canvas {
     height: 100%;
 }
 
+.unselect {
+    user-select: unset;
+    -moz-user-select: unset;
+    -webkit-user-select: unset;
+}
+
+#sun {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    position: fixed;
+    top: -1000px;
+    left: -1000px;
+    animation-duration: 3s;
+    animation-name: sun-pulse;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    background-image: radial-gradient(circle 100px, rgb(255, 251, 191), rgb(255, 187, 0), lightyellow);
+    box-shadow: 0 0 300px 90px rgb(247, 183, 45);
+}
+
 .glasscard {
     width: 300px;
     height: 600px;
@@ -74,4 +96,13 @@ canvas {
     padding: 10px;
     border-radius: 5px;
     background-color: rgba( 180, 180, 180, 0.1);
+}
+
+@keyframes sun-pulse {
+    from {
+        box-shadow: 0 0 300px 90px rgb(247, 183, 45);
+    }
+    to {
+        box-shadow: 0 0 300px 100px rgb(247, 183, 45);
+    }
 }

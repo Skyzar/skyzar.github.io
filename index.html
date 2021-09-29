@@ -6,32 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Skyzar</title>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js" defer></script>
     <script src="assets/js/particles.min.js"></script>
     <link href="assets/css/main.css" rel="stylesheet">
-</head>
-
-<body>
-    <div id="particles-js">
-    </div>
-    <div class="glasscard">
-        <div class="glasscard__header">
-            <img src="assets/img/profile.jpg" class="glasscard__img">
-            <div class="glasscard__title">
-                Skyzar
-            </div>
-        </div>
-        <div class="glasscard__text">
-            <div class="glasscard__card">
-                Project 1
-            </div>
-            <div class="glasscard__card">
-                Project 2
-            </div>
-        </div>
-    </div>
     <script>
-        particlesJS("particles-js", {
+        config = {
             "particles": {
                 "number": {
                     "value": 420,
@@ -140,7 +119,36 @@
                 }
             },
             "retina_detect": true
-        });
+        }
+    </script>
+</head>
+
+<body id="body">
+    <div id="particles-js"></div>
+
+    <div id="sun"></div>
+
+    <div id="moon"></div>
+
+    <div class="glasscard">
+        <div class="glasscard__header">
+            <img draggable="false" src="assets/img/profile.jpg" class="glasscard__img">
+            <div class="glasscard__title">
+                Skyzar
+            </div>
+        </div>
+        <div class="glasscard__text">
+            <div class="glasscard__card">
+                Project 1
+            </div>
+            <div class="glasscard__card">
+                Project 2
+            </div>
+        </div>
+    </div>
+
+    <script>
+        particlesJS("particles-js", config);
     </script>
 </body>
 
